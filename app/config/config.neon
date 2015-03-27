@@ -29,6 +29,8 @@ services:
 
 	- implement: IAllInComponentFactory
 	  create: AllInComponent(configParam2: %testkey2%, configParam1: %testkey1%)
+	  # try change autowired value below: (yes|no)
+	  autowired: yes
 	- implement: IConfigComponentFactory
 	  create: ConfigComponent(%testkey1%)
 	- IParameterComponentFactory

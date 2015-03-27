@@ -17,6 +17,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 	public $serviceFactory;
 	/** @var \ISimpleComponentFactory @inject */
 	public $simpleFactory;
+	/** @var \IAllInComponentFactory @inject */
+	public $allInComponent;
 
 	public function beforeRender() {
 		parent::beforeRender();
@@ -25,6 +27,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter {
 		dump($this->parameterServiceFactory->create(['test']));
 		dump($this->serviceFactory->create());
 		dump($this->simpleFactory->create());
+		dump($this->allInComponent->create(['test']));
 	}
 
 }
